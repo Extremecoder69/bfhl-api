@@ -84,6 +84,10 @@ app.post('/bfhl', (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("✅ BFHL API is live! Use POST /bfhl with JSON data to test.");
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`API listening on port ${PORT}`);
